@@ -4,6 +4,13 @@ function addItem()
 {
   var newItem;
   newItem = document.getElementById("price").value;
+  var check = isNaN(newItem); //returns false
+  if(check){
+    alert("Please enter a valid number.");
+  }
+  else{
+    alert("That is correct.");
+  }
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
   //OTHERWISE,
