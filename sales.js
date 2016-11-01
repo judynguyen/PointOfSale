@@ -2,7 +2,7 @@ var runningTotal = 0.0;
 
 function addItem()
 {
-  var dollars;
+  var dollars="$0.0";
   var newItem;
   newItem = document.getElementById("price").value;
   var check = isNaN(newItem); //returns false
@@ -13,11 +13,10 @@ function addItem()
     newItem = Number(newItem);
     runningTotal=runningTotal+newItem;
     dollars = asCurrency(runningTotal);
+    document.getElementById("subtotal").innerHTML=dollars;
     document.getElementById("price").value="";
-    setCookie(preTax, runningTotal);
+    setCookie("preTax", runningTotal);
   }
-  // update the value of the input with the id "price" to be an empty string
-  // update a cookie called "preTax" with the value of runningTotal
 }
 
 //takes a number and gives a string with the number displayed as USD currency
