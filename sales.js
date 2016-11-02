@@ -30,7 +30,7 @@ function calculateReciept(){
   document.getElementById("tot").innerHTML=asCurrency(recieptTotal);
 }
 
-//takes a number and gives a string with the number displayed as USD currency
+//takes a number and gives it a string with the number displayed as USD currency
 function asCurrency(val)
 {
   return "$" + val.toFixed(2);
