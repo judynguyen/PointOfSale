@@ -20,7 +20,7 @@ function addItem()
 }
 
 function calculateReciept(){
-  var recieptSubtotal=Number(getCookie(preTax));
+  var recieptSubtotal=Number(getCookie("preTax"));
   document.getElementById("sub").innerHTML=asCurrency(recieptSubtotal);
 
   var recieptTax=recieptSubtotal*0.075;
@@ -28,8 +28,6 @@ function calculateReciept(){
 
   var recieptTotal=recieptSubtotaletSubtotal+recieptTax;
   document.getElementById("tot").innerHTML=asCurrency(recieptTotal);
-
-
 }
 
 //takes a number and gives a string with the number displayed as USD currency
