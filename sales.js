@@ -26,7 +26,7 @@ function calculateReciept(){
   var recieptTax=recieptSubtotal*0.075;
   document.getElementById("tax").innerHTML=asCurrency(recieptTax);
 
-  var recieptTotal=recieptSubtotaletSubtotal+recieptTax;
+  var recieptTotal=recieptSubtotal+recieptTax;
   document.getElementById("tot").innerHTML=asCurrency(recieptTotal);
 }
 
