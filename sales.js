@@ -19,6 +19,16 @@ function addItem()
   }
 }
 
+function calculateReciept(){
+  var recieptSubtotal=Number(getCookie(preTax));
+  console.log(recieptSubtotal);
+  var recieptTax=recieptSubtotal*0.075;
+  console.log(recieptTax);
+  var recieptTotal=recieptSubtotaletSubtotal+recieptTax;
+  console.log(recieptTotal);
+
+}
+
 //takes a number and gives a string with the number displayed as USD currency
 function asCurrency(val)
 {
