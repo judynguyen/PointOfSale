@@ -21,11 +21,14 @@ function addItem()
 
 function calculateReciept(){
   var recieptSubtotal=Number(getCookie(preTax));
-  console.log(recieptSubtotal);
+  document.getElementById("sub").innerHTML=asCurrency(recieptSubtotal);
+
   var recieptTax=recieptSubtotal*0.075;
-  console.log(recieptTax);
+  document.getElementById("tax").innerHTML=asCurrency(recieptTax);
+
   var recieptTotal=recieptSubtotaletSubtotal+recieptTax;
-  console.log(recieptTotal);
+  document.getElementById("tot").innerHTML=asCurrency(recieptTotal);
+
 
 }
 
